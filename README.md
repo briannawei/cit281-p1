@@ -1,37 +1,51 @@
-## Welcome to GitHub Pages
+## Project 1
 
-You can use the [editor on GitHub](https://github.com/briannawei/cit281-p1/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<img width="581" alt="p1-folders" src="https://user-images.githubusercontent.com/84175061/120882161-ae939b80-c58a-11eb-80f2-fff6d2bd5939.png">
+<img width="593" alt="p1-ping" src="https://user-images.githubusercontent.com/84175061/120882162-af2c3200-c58a-11eb-8eff-b75e1ffcde6c.png">
+<img width="587" alt="p1-tree" src="https://user-images.githubusercontent.com/84175061/120882164-afc4c880-c58a-11eb-9da7-f4af5df5f6e0.png">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### p1-date.js
+```
+/*
+    CIT 281 Project 1
+    Name: Brianna Wei
+*/
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+let daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-```markdown
-Syntax highlighted code block
+let currentDate =  new Date();
+let numAsDayOfWeek = currentDate.getDay();
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+for(let i= 0; i <days.length();i++) {
+    console.log(daysOfTheWeek[(numAsDayOfWeek + i) % 7];
 
-1. Numbered
-2. List
+}
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### p1-random.js
+```
+/*
+    CIT 281 Project 1
+    Name: Brianna Wei
+*/
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/briannawei/cit281-p1/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
-### Support or Contact
+let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+let line = ""; 
+let randomChar = getRandomInteger(5,25);
+for (let i = 0; i < randomChar; i ++) {
+    let randomIndex = getRandomInteger(0,25);
+    line = line + letters[randomIndex];
+}
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+console.log(line);
+
+```
